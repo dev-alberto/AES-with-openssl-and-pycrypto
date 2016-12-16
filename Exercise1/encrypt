@@ -1,0 +1,6 @@
+#!/bin/bash
+
+key="6d656469616e20202020202020202020"
+iv="42424242424242424242424242424242"
+openssl enc -aes-128-cfb -in plain.txt -out enc_cfb.txt -K $key -iv $iv
+openssl enc -aes-128-ecb -in plain.txt -out enc_ecb.txt -K $key
