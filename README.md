@@ -1,4 +1,4 @@
-# AES-with-openssl-and-pycrypto
+# Symmetric-Cryptography-and-Hash-functions
 First assignment for Information Security class
 # Problem statement
 
@@ -67,10 +67,8 @@ padding is not done by default here.
 # Analysis & Testing
 
 Exercise 1
-To test this, I used encrypted files in the command line (https://linuxconfig.org/using-
-openssl-to-encrypt-messages-and-files-on-linux), then I used my script to check whether
-the right key was returned. I used this tool to convert string to hex http://string-
-functions.com/hex-string.aspx
+To test this, I used encrypted files in the command line (https://linuxconfig.org/using-openssl-to-encrypt-messages-and-files-on-linux), then I used my script to check whether
+the right key was returned. I used this tool to convert string to hex http://string-functions.com/hex-string.aspx
 Exercise 2
 To test this exercise, we used three types of files. Files smaller than 16 bytes, files between
 16 and 32 bytes and files that are larger in size, for example a Wikipedia page. For the
@@ -83,7 +81,7 @@ I have used files of different sizes to test how well the server performs.
 # Final Remarks
 
 Exercise 1
-The key provided here is not secure, because it is vulnarable to a simple dictionary attack.
+The key provided here is not secure, because it is vulnerable to a simple dictionary attack.
 If the key used were a random 16 bytes string, to brute force the key we would require
 2 128 iterations, which is not feasible.
 Exercise 2
@@ -93,5 +91,5 @@ messages appear to be uncorrelated.
 Exercise 3
 If an attacker can see the messages between A and B, and determine that the mode of
 encryption used is ECB, he could determine whether 2 blocks of 16 bytes have the same
-plaintext, which is an information leak. As a rule of thumb, never use ECB for encrypting
+plain text, which is an information leak. As a rule of thumb, never use ECB for encrypting
 more than one block of data.
